@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "legal-clause-finder"
+version = "1.0.0"
+description = "Flag risky contract clauses via curated keyword/regex heuristic scan. Zero API key."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+keywords = [
+    "contracts", "legal", "clauses", "risk-analysis", "agentic",
+    "autonomous", "ai", "no-api-key", "open-source",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Legal Industry",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Text Processing :: General",
+]
+dependencies = []
+
+[project.scripts]
+legal-clause-finder = "legalclause.cli:main"
+
+[tool.setuptools]
+packages = ["legalclause"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
